@@ -4,6 +4,12 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+        MementoPatten();
+    }
+
+    #region MementoPatten
+    private static void MementoPatten()
+    {
         var editor = new Editor();
         var history = new History();
         editor.SetContent("a");
@@ -19,4 +25,5 @@ internal class Program
         editor.Restore(history.Pop());
         Console.WriteLine(editor.GetContent());
     }
+    #endregion
 }
