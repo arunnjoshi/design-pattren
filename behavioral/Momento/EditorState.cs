@@ -1,4 +1,4 @@
-﻿namespace Momento;
+﻿namespace Memento;
 
 public class EditorState
 {

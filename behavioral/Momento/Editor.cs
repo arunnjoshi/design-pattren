@@ -1,7 +1,7 @@
-namespace Momento;
-
+namespace Memento;
 public class Editor
 {
+
     private string content = null!;
 
     public EditorState CreateState()

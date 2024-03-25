@@ -1,8 +1,8 @@
-﻿namespace Momento;
+﻿namespace Memento;
 
 public class History
 {
-    private Stack<EditorState> history = new Stack<EditorState>();
+    private readonly Stack<EditorState> history = new();
 
     public void Push(EditorState state)
     {
@@ -11,6 +11,8 @@ public class History
 
     public EditorState Pop()
     {
+        if (history.Count == 0)
+            throw new InvalidOperationException("stack is empty");
         return history.Pop();
     }
 }
