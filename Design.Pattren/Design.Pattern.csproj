@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\behavioral\Momento\Momento.csproj" />
-    <ProjectReference Include="..\State\State.csproj" />
+    <ProjectReference Include="..\behavioral\State\State.csproj" />
   </ItemGroup>
 
 </Project>
