@@ -10,6 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\behavioral\Momento\Momento.csproj" />
     <ProjectReference Include="..\behavioral\State\State.csproj" />
+    <ProjectReference Include="..\behavioral\Iterator\Iterator.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using Memento;
+﻿using Iterator;
+using Memento;
 using State;
 
 internal class Program
@@ -6,7 +7,8 @@ internal class Program
     private static void Main(string[] args)
     {
         //MementoPattern();
-        StatePattern();
+        // StatePattern();
+        IteratorPattern();
     }
 
     #region MementoPatten
@@ -41,6 +43,24 @@ internal class Program
         canvas.SetTool(new BrushTool());
         canvas.MouseDown();
         canvas.MouseUp();
+    }
+    #endregion
+
+    #region  IteratorPattern
+    public static void IteratorPattern()
+    {
+        var browserHistory = new BrowserHistory();
+        browserHistory.Push("a");
+        browserHistory.Push("b");
+        browserHistory.Push("c");
+
+        var iterator = browserHistory.CreateIterator();
+        while (iterator.HasNext())
+        {
+            var url = iterator.Current();
+            Console.WriteLine(url);
+            iterator.Next();
+        }
     }
     #endregion
 }
