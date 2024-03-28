@@ -1,6 +1,7 @@
 ﻿using Iterator;
 using Memento;
 using State;
+using StrategyPattern;
 
 internal class Program
 {
@@ -8,7 +9,8 @@ internal class Program
     {
         //MementoPattern();
         // StatePattern();
-        IteratorPattern();
+        //IteratorPattern();
+        StrategyPattern();
     }
 
     #region MementoPatten
@@ -61,6 +63,14 @@ internal class Program
             Console.WriteLine(url);
             iterator.Next();
         }
+    }
+    #endregion
+
+    #region StrategyPattern
+    public static void StrategyPattern()
+    {
+        ImageStorage.Store("arun Joshi",new PngCompressor(),new BlackAndWhiteFilter());
+        ImageStorage.Store("arun Joshi",new JpegCompressor(),new BlackAndWhiteFilter());
     }
     #endregion
 }

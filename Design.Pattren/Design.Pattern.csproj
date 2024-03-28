@@ -11,6 +11,7 @@
     <ProjectReference Include="..\behavioral\Momento\Momento.csproj" />
     <ProjectReference Include="..\behavioral\State\State.csproj" />
     <ProjectReference Include="..\behavioral\Iterator\Iterator.csproj" />
+    <ProjectReference Include="..\behavioral\StrategyPattern\StrategyPattern.csproj" />
   </ItemGroup>
 
 </Project>
