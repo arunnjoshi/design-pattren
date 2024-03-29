@@ -2,6 +2,7 @@
 using Memento;
 using State;
 using StrategyPattern;
+using TemplateMethod;
 
 internal class Program
 {
@@ -10,7 +11,10 @@ internal class Program
         //MementoPattern();
         // StatePattern();
         //IteratorPattern();
-        StrategyPattern();
+        //StrategyPattern();
+
+        var task = new TransferMoney();
+        task.Execute();
     }
 
     #region MementoPatten
