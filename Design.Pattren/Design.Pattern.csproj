@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\behavioral\CommandPattern\CommandPattern.csproj" />
     <ProjectReference Include="..\behavioral\Momento\Momento.csproj" />
     <ProjectReference Include="..\behavioral\State\State.csproj" />
     <ProjectReference Include="..\behavioral\Iterator\Iterator.csproj" />

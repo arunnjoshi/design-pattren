@@ -1,18 +1,42 @@
-﻿using Iterator;
+﻿using CommandPattern;
+using CommandPattern.FX;
+using Iterator;
 using Memento;
 using State;
 using StrategyPattern;
 using TemplateMethod;
-
 internal class Program
 {
     private static void Main(string[] args)
     {
         //MementoPattern();
-        // StatePattern();
+        //StatePattern();
         //IteratorPattern();
         //StrategyPattern();
-        TemplateMethod();
+        //TemplateMethod();
+
+        var service = new CustomerService();
+        var command = new AddCustomerCommand(service);
+        var button = new Button(command);
+        button.Click();
+
+        //composite command
+        var compositeCommand = new CompositeCommand();
+        compositeCommand.AddCommand(new ResizeCommand());
+        compositeCommand.AddCommand(new BlackAndWhiteCommand());
+        compositeCommand.Execute();
+
+        //Undoable Command
+
+        var history = new HistoryCommand();
+        var document = new HtmlDocument();
+        document.SetContent("hello world");
+
+        var boldCommand = new BoldCommand(document,history);
+        boldCommand.Execute();
+        Console.WriteLine(document.GetContent());
+        boldCommand.UnExecute();
+        Console.WriteLine(document.GetContent());
     }
 
     #region MementoPatten
@@ -71,8 +95,8 @@ internal class Program
     #region StrategyPattern
     public static void StrategyPattern()
     {
-        ImageStorage.Store("arun Joshi",new PngCompressor(),new BlackAndWhiteFilter());
-        ImageStorage.Store("arun Joshi",new JpegCompressor(),new BlackAndWhiteFilter());
+        ImageStorage.Store("arun Joshi", new PngCompressor(), new BlackAndWhiteFilter());
+        ImageStorage.Store("arun Joshi", new JpegCompressor(), new BlackAndWhiteFilter());
     }
     #endregion
 
