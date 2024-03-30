@@ -12,9 +12,7 @@ internal class Program
         // StatePattern();
         //IteratorPattern();
         //StrategyPattern();
-
-        var task = new TransferMoney();
-        task.Execute();
+        TemplateMethod();
     }
 
     #region MementoPatten
@@ -75,6 +73,14 @@ internal class Program
     {
         ImageStorage.Store("arun Joshi",new PngCompressor(),new BlackAndWhiteFilter());
         ImageStorage.Store("arun Joshi",new JpegCompressor(),new BlackAndWhiteFilter());
+    }
+    #endregion
+
+    #region TemplateMethod
+    private static void TemplateMethod()
+    {
+        var task = new TransferMoney();
+        task.Execute();
     }
     #endregion
 }

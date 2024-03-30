@@ -4,6 +4,6 @@ public class AuditTrail
 {
     public void Record()
     {
-        Console.WriteLine("Aduit");
+        Console.WriteLine("Audit");
     }
 }
