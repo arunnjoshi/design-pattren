@@ -14,29 +14,8 @@ internal class Program
         //IteratorPattern();
         //StrategyPattern();
         //TemplateMethod();
+        CommandPattern();
 
-        var service = new CustomerService();
-        var command = new AddCustomerCommand(service);
-        var button = new Button(command);
-        button.Click();
-
-        //composite command
-        var compositeCommand = new CompositeCommand();
-        compositeCommand.AddCommand(new ResizeCommand());
-        compositeCommand.AddCommand(new BlackAndWhiteCommand());
-        compositeCommand.Execute();
-
-        //Undoable Command
-
-        var history = new HistoryCommand();
-        var document = new HtmlDocument();
-        document.SetContent("hello world");
-
-        var boldCommand = new BoldCommand(document,history);
-        boldCommand.Execute();
-        Console.WriteLine(document.GetContent());
-        boldCommand.UnExecute();
-        Console.WriteLine(document.GetContent());
     }
 
     #region MementoPatten
@@ -105,6 +84,34 @@ internal class Program
     {
         var task = new TransferMoney();
         task.Execute();
+    }
+    #endregion
+
+    #region CommandPattern
+    public static void CommandPattern()
+    {
+        var service = new CustomerService();
+        var command = new AddCustomerCommand(service);
+        var button = new Button(command);
+        button.Click();
+
+        //composite command
+        var compositeCommand = new CompositeCommand();
+        compositeCommand.AddCommand(new ResizeCommand());
+        compositeCommand.AddCommand(new BlackAndWhiteCommand());
+        compositeCommand.Execute();
+
+        //Undoable Command
+
+        var history = new HistoryCommand();
+        var document = new HtmlDocument();
+        document.SetContent("hello world");
+
+        var boldCommand = new BoldCommand(document, history);
+        boldCommand.Execute();
+        Console.WriteLine(document.GetContent());
+        boldCommand.UnExecute();
+        Console.WriteLine(document.GetContent());
     }
     #endregion
 }

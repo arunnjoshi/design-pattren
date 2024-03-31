@@ -20,7 +20,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StrategyPattern", "behavior
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateMethod", "behavioral\TemplateMethod\TemplateMethod.csproj", "{7FB2DAAD-50E3-4110-B22E-4654C58480DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandPattern", "behavioral\CommandPattern\CommandPattern.csproj", "{C90C9729-F8F8-45AD-8AC1-224E6A2C15D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandPattern", "behavioral\CommandPattern\CommandPattern.csproj", "{C90C9729-F8F8-45AD-8AC1-224E6A2C15D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer", "behavioral\ObserverDesignPattern\Observer.csproj", "{43A32630-4CE7-461F-861E-2D694C31E627}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,10 @@ Global
 		{C90C9729-F8F8-45AD-8AC1-224E6A2C15D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C90C9729-F8F8-45AD-8AC1-224E6A2C15D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C90C9729-F8F8-45AD-8AC1-224E6A2C15D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43A32630-4CE7-461F-861E-2D694C31E627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43A32630-4CE7-461F-861E-2D694C31E627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43A32630-4CE7-461F-861E-2D694C31E627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43A32630-4CE7-461F-861E-2D694C31E627}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{92316066-4375-4994-85ED-0A9EE75A084F} = {6D5AA746-8097-4747-A970-ABCAC74B0F11}
 		{7FB2DAAD-50E3-4110-B22E-4654C58480DC} = {6D5AA746-8097-4747-A970-ABCAC74B0F11}
 		{C90C9729-F8F8-45AD-8AC1-224E6A2C15D0} = {6D5AA746-8097-4747-A970-ABCAC74B0F11}
+		{43A32630-4CE7-461F-861E-2D694C31E627} = {6D5AA746-8097-4747-A970-ABCAC74B0F11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85FFE86E-6C58-43DF-A67E-69BC117454F3}
