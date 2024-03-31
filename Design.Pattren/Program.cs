@@ -2,6 +2,7 @@
 using CommandPattern.FX;
 using Iterator;
 using Memento;
+using Observer;
 using State;
 using StrategyPattern;
 using TemplateMethod;
@@ -14,8 +15,8 @@ internal class Program
         //IteratorPattern();
         //StrategyPattern();
         //TemplateMethod();
-        CommandPattern();
-
+        //CommandPattern();
+        ObserverPattern();
     }
 
     #region MementoPatten
@@ -112,6 +113,24 @@ internal class Program
         Console.WriteLine(document.GetContent());
         boldCommand.UnExecute();
         Console.WriteLine(document.GetContent());
+    }
+    #endregion
+
+    #region ObserverPattern
+    public static void ObserverPattern()
+    {
+        var dataSource = new DataSource();
+        var sheet1 = new SpreadSheet();
+        var sheet2 = new SpreadSheet();
+        var chart = new Chart();
+        dataSource.AddObserver(sheet1);
+        dataSource.AddObserver(sheet2);
+        dataSource.AddObserver(chart);
+        dataSource.SetValue(10);
+        dataSource.RemoveObserver(sheet2);
+        dataSource.RemoveObserver(sheet1);
+        dataSource.RemoveObserver(chart);
+        dataSource.SetValue(20);
     }
     #endregion
 }
