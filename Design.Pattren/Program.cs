@@ -1,6 +1,7 @@
 ﻿using CommandPattern;
 using CommandPattern.FX;
 using Iterator;
+using Mediator;
 using Memento;
 using Observer;
 using State;
@@ -16,7 +17,10 @@ internal class Program
         //StrategyPattern();
         //TemplateMethod();
         //CommandPattern();
-        ObserverPattern();
+        //ObserverPattern();
+
+        var dialog = new ArticlesDialogBox();
+        dialog.SimulateUserIntegration();
     }
 
     #region MementoPatten
@@ -93,7 +97,7 @@ internal class Program
     {
         var service = new CustomerService();
         var command = new AddCustomerCommand(service);
-        var button = new Button(command);
+        var button = new CommandPattern.FX.Button(command);
         button.Click();
 
         //composite command

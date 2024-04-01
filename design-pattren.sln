@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Design.Pattern", "Design.Pattren\Design.Pattern.csproj", "{3CD494F2-7149-46C7-A6A2-07F96A5DBD3A}"
 	ProjectSection(ProjectDependencies) = postProject
 		{C90C9729-F8F8-45AD-8AC1-224E6A2C15D0} = {C90C9729-F8F8-45AD-8AC1-224E6A2C15D0}
+		{CD65494E-FBC2-4FAA-B6FC-A97F5B500349} = {CD65494E-FBC2-4FAA-B6FC-A97F5B500349}
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "behavioral", "behavioral", "{6D5AA746-8097-4747-A970-ABCAC74B0F11}"
@@ -22,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateMethod", "behaviora
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandPattern", "behavioral\CommandPattern\CommandPattern.csproj", "{C90C9729-F8F8-45AD-8AC1-224E6A2C15D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer", "behavioral\ObserverDesignPattern\Observer.csproj", "{43A32630-4CE7-461F-861E-2D694C31E627}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Observer", "behavioral\ObserverDesignPattern\Observer.csproj", "{43A32630-4CE7-461F-861E-2D694C31E627}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediator", "behavioral\Mediator\Mediator.csproj", "{CD65494E-FBC2-4FAA-B6FC-A97F5B500349}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +65,10 @@ Global
 		{43A32630-4CE7-461F-861E-2D694C31E627}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43A32630-4CE7-461F-861E-2D694C31E627}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43A32630-4CE7-461F-861E-2D694C31E627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD65494E-FBC2-4FAA-B6FC-A97F5B500349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD65494E-FBC2-4FAA-B6FC-A97F5B500349}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD65494E-FBC2-4FAA-B6FC-A97F5B500349}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD65494E-FBC2-4FAA-B6FC-A97F5B500349}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +81,7 @@ Global
 		{7FB2DAAD-50E3-4110-B22E-4654C58480DC} = {6D5AA746-8097-4747-A970-ABCAC74B0F11}
 		{C90C9729-F8F8-45AD-8AC1-224E6A2C15D0} = {6D5AA746-8097-4747-A970-ABCAC74B0F11}
 		{43A32630-4CE7-461F-861E-2D694C31E627} = {6D5AA746-8097-4747-A970-ABCAC74B0F11}
+		{CD65494E-FBC2-4FAA-B6FC-A97F5B500349} = {6D5AA746-8097-4747-A970-ABCAC74B0F11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85FFE86E-6C58-43DF-A67E-69BC117454F3}
