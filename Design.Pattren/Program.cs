@@ -7,6 +7,7 @@ using Observer;
 using State;
 using StrategyPattern;
 using TemplateMethod;
+using COR;
 internal class Program
 {
     private static void Main(string[] args)
@@ -18,9 +19,8 @@ internal class Program
         //TemplateMethod();
         //CommandPattern();
         //ObserverPattern();
-
-        var dialog = new ArticlesDialogBox();
-        dialog.SimulateUserIntegration();
+        // MediatorPattern();
+        ChainOfResponsibility();
     }
 
     #region MementoPatten
@@ -134,6 +134,25 @@ internal class Program
         dataSource.RemoveObserver(sheet2);
         dataSource.RemoveObserver(sheet1);
         dataSource.SetValue(20);
+    }
+    #endregion
+
+    #region MediatorPattern
+    public static void MediatorPattern()
+    {
+        var dialog = new ArticlesDialogBox();
+        dialog.SimulateUserIntegration();
+    }
+    #endregion
+
+    #region  ChainOfResponsibility
+    public static void ChainOfResponsibility()
+    {
+        var compressor = new Compressor(null);
+        var logger = new Logger(compressor);
+        var authenticator = new Authenticator(logger);
+        var service = new WebServer(authenticator);
+        service.Handle(new HttpRequest("admin", "12341"));
     }
     #endregion
 }
