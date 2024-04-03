@@ -17,6 +17,7 @@
     <ProjectReference Include="..\behavioral\StrategyPattern\StrategyPattern.csproj" />
     <ProjectReference Include="..\behavioral\TemplateMethod\TemplateMethod.csproj" />
     <ProjectReference Include="..\behavioral\COR\COR.csproj" />
+    <ProjectReference Include="..\behavioral\visitor\visitor.csproj" />
   </ItemGroup>
 
 </Project>
