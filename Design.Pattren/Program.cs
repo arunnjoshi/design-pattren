@@ -8,6 +8,7 @@ using State;
 using StrategyPattern;
 using TemplateMethod;
 using COR;
+using visitor;
 internal class Program
 {
     private static void Main(string[] args)
@@ -19,8 +20,9 @@ internal class Program
         //TemplateMethod();
         //CommandPattern();
         //ObserverPattern();
-        // MediatorPattern();
-        ChainOfResponsibility();
+        //MediatorPattern();
+        //ChainOfResponsibility();
+        VisitorPattern();
     }
 
     #region MementoPatten
@@ -109,7 +111,7 @@ internal class Program
         //Undoable Command
 
         var history = new HistoryCommand();
-        var document = new HtmlDocument();
+        var document = new CommandPattern.HtmlDocument();
         document.SetContent("hello world");
 
         var boldCommand = new BoldCommand(document, history);
@@ -153,6 +155,17 @@ internal class Program
         var authenticator = new Authenticator(logger);
         var service = new WebServer(authenticator);
         service.Handle(new HttpRequest("admin", "12341"));
+    }
+    #endregion
+
+    #region VisitorPattern
+    public static void VisitorPattern()
+    {
+        var document = new visitor.HtmlDocument();
+        document.AddNode(new HeadingNode());
+        document.AddNode(new AnchorNode());
+        document.Execute(new HighlightOperation());
+        document.Execute(new PlainTestOperation());
     }
     #endregion
 }
