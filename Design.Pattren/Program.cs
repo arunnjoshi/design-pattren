@@ -9,6 +9,7 @@ using StrategyPattern;
 using TemplateMethod;
 using COR;
 using visitor;
+using Composite;
 internal class Program
 {
     private static void Main(string[] args)
@@ -22,7 +23,9 @@ internal class Program
         //ObserverPattern();
         //MediatorPattern();
         //ChainOfResponsibility();
-        VisitorPattern();
+        //VisitorPattern();
+
+        CompositePattern();
     }
 
     #region MementoPatten
@@ -166,6 +169,25 @@ internal class Program
         document.AddNode(new AnchorNode());
         document.Execute(new HighlightOperation());
         document.Execute(new PlainTestOperation());
+    }
+    #endregion
+
+    #region CompositePattern
+    public static void CompositePattern()
+    {
+        var group = new Group();
+        group.Add(new Shape());
+        group.Add(new Shape());
+
+        var group2 = new Group();
+        group2.Add(new Shape());
+        group2.Add(new Shape());
+
+        var group3 = new Group();
+        group3.Add(group);
+        group3.Add(group2);
+        group3.Render();
+        group3.Move();
     }
     #endregion
 }
