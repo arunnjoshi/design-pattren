@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COR", "behavioral\COR\COR.c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "visitor", "behavioral\visitor\visitor.csproj", "{87C78E4C-BE26-47A1-99ED-459234ABDE73}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Structural", "Structural", "{EF742B61-3251-463F-9138-2B681090B06B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter", "Structural\Adapter\Adapter.csproj", "{EAA0EB29-71DA-4A49-B845-D426F9BA7C21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,10 @@ Global
 		{87C78E4C-BE26-47A1-99ED-459234ABDE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87C78E4C-BE26-47A1-99ED-459234ABDE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87C78E4C-BE26-47A1-99ED-459234ABDE73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAA0EB29-71DA-4A49-B845-D426F9BA7C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAA0EB29-71DA-4A49-B845-D426F9BA7C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAA0EB29-71DA-4A49-B845-D426F9BA7C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAA0EB29-71DA-4A49-B845-D426F9BA7C21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +104,7 @@ Global
 		{CD65494E-FBC2-4FAA-B6FC-A97F5B500349} = {6D5AA746-8097-4747-A970-ABCAC74B0F11}
 		{D4247298-7D66-460F-A1EC-34601600E663} = {6D5AA746-8097-4747-A970-ABCAC74B0F11}
 		{87C78E4C-BE26-47A1-99ED-459234ABDE73} = {6D5AA746-8097-4747-A970-ABCAC74B0F11}
+		{EAA0EB29-71DA-4A49-B845-D426F9BA7C21} = {EF742B61-3251-463F-9138-2B681090B06B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85FFE86E-6C58-43DF-A67E-69BC117454F3}
