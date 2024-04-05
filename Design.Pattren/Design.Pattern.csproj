@@ -19,6 +19,7 @@
     <ProjectReference Include="..\behavioral\COR\COR.csproj" />
     <ProjectReference Include="..\behavioral\visitor\visitor.csproj" />
     <ProjectReference Include="..\Structural\Composite\Composite.csproj" />
+    <ProjectReference Include="..\Structural\Adapter\Adapter.csproj" />
   </ItemGroup>
 
 </Project>

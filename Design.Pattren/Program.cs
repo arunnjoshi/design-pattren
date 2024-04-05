@@ -10,22 +10,27 @@ using TemplateMethod;
 using COR;
 using visitor;
 using Composite;
+using Adapter;
+using Adapter.pkg;
 internal class Program
 {
     private static void Main(string[] args)
     {
-        //MementoPattern();
-        //StatePattern();
-        //IteratorPattern();
-        //StrategyPattern();
-        //TemplateMethod();
-        //CommandPattern();
-        //ObserverPattern();
-        //MediatorPattern();
-        //ChainOfResponsibility();
-        //VisitorPattern();
+        //                           Behavioral design pattern
+        // MementoPattern();
+        // StatePattern();
+        // IteratorPattern();
+        // StrategyPattern();
+        // TemplateMethod();
+        // CommandPattern();
+        // ObserverPattern();
+        // MediatorPattern();
+        // ChainOfResponsibility();
+        // VisitorPattern();
 
-        CompositePattern();
+        //                          structural design pattern
+        // CompositePattern();
+        AdapterPattern();
     }
 
     #region MementoPatten
@@ -188,6 +193,16 @@ internal class Program
         group3.Add(group2);
         group3.Render();
         group3.Move();
+    }
+    #endregion
+
+    #region  AdapterPattern
+    public static void AdapterPattern()
+    {
+        var imageView = new ImageView(new Image());
+        imageView.Apply(new VividFilter());
+
+        imageView.Apply(new CamelFilter(new Camel()));
     }
     #endregion
 }
