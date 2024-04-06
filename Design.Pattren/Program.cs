@@ -12,6 +12,7 @@ using visitor;
 using Composite;
 using Adapter;
 using Adapter.pkg;
+using Decorator;
 internal class Program
 {
     private static void Main(string[] args)
@@ -30,7 +31,8 @@ internal class Program
 
         //                          structural design pattern
         // CompositePattern();
-        AdapterPattern();
+        // AdapterPattern();
+        DecoratorPattern();
     }
 
     #region MementoPatten
@@ -204,5 +206,18 @@ internal class Program
 
         imageView.Apply(new CamelFilter(new Camel()));
     }
+    #endregion
+
+    #region DecoratorPattern
+    public static void DecoratorPattern()
+    {
+        StoreCreditCard(new CompressCloudStream(new EncryptedCloudStream(new CloudStream())));
+    }
+
+    private static void StoreCreditCard(IStream stream)
+    {
+        stream.Write("1234-1234-1234-1234");
+    }
+
     #endregion
 }

@@ -20,6 +20,7 @@
     <ProjectReference Include="..\behavioral\visitor\visitor.csproj" />
     <ProjectReference Include="..\Structural\Composite\Composite.csproj" />
     <ProjectReference Include="..\Structural\Adapter\Adapter.csproj" />
+    <ProjectReference Include="..\Structural\Decorator\Decorator.csproj" />
   </ItemGroup>
 
 </Project>
