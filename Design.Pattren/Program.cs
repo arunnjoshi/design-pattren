@@ -14,6 +14,7 @@ using Adapter;
 using Adapter.pkg;
 using Decorator;
 using Facade;
+using Flyweight;
 internal class Program
 {
     private static void Main(string[] args)
@@ -34,7 +35,8 @@ internal class Program
         // CompositePattern();
         // AdapterPattern();
         // DecoratorPattern();
-        FacadePattern();
+        // FacadePattern();
+        FlyweightPattern();
     }
 
     #region MementoPatten
@@ -227,6 +229,17 @@ internal class Program
     public static void FacadePattern()
     {
         NotificationService.Send("message", "ip");
+    }
+    #endregion
+
+    #region FlyweightPattern
+    public static void FlyweightPattern()
+    {
+        var pointService = new PointService(new PointIconFactory());
+        foreach (var point in pointService.GetPoints())
+        {
+            point.Draw();
+        }
     }
     #endregion
 }
