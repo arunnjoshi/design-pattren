@@ -13,6 +13,7 @@ using Composite;
 using Adapter;
 using Adapter.pkg;
 using Decorator;
+using Facade;
 internal class Program
 {
     private static void Main(string[] args)
@@ -32,7 +33,8 @@ internal class Program
         //                          structural design pattern
         // CompositePattern();
         // AdapterPattern();
-        DecoratorPattern();
+        // DecoratorPattern();
+        FacadePattern();
     }
 
     #region MementoPatten
@@ -219,5 +221,12 @@ internal class Program
         stream.Write("1234-1234-1234-1234");
     }
 
+    #endregion
+
+    #region FacadePattern
+    public static void FacadePattern()
+    {
+        NotificationService.Send("message", "ip");
+    }
     #endregion
 }

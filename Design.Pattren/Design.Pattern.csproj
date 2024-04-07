@@ -21,6 +21,7 @@
     <ProjectReference Include="..\Structural\Composite\Composite.csproj" />
     <ProjectReference Include="..\Structural\Adapter\Adapter.csproj" />
     <ProjectReference Include="..\Structural\Decorator\Decorator.csproj" />
+    <ProjectReference Include="..\Structural\Facade\Facade.csproj" />
   </ItemGroup>
 
 </Project>
