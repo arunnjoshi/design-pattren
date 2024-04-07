@@ -17,6 +17,7 @@ public class CompressCloudStream : IStream
 
     private string CompressData(string data)
     {
-        return "&&";
+        data += " compress ";
+        return data;
     }
 }

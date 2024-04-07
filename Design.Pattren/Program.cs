@@ -211,7 +211,7 @@ internal class Program
     #region DecoratorPattern
     public static void DecoratorPattern()
     {
-        StoreCreditCard(new CompressCloudStream(new EncryptedCloudStream(new CloudStream())));
+        StoreCreditCard(new EncryptedCloudStream(new CompressCloudStream(new CloudStream())));
     }
 
     private static void StoreCreditCard(IStream stream)

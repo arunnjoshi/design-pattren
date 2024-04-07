@@ -18,6 +18,7 @@ public class EncryptedCloudStream : IStream
 
     private string EncryptDate(string data)
     {
-        return "%%1234%%";
+        data += " Encrypt ";
+        return data;
     }
 }
