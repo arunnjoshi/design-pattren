@@ -16,6 +16,7 @@ using Decorator;
 using Facade;
 using Flyweight;
 using Bridge;
+using Proxy;
 internal class Program
 {
 	private static void Main(string[] args)
@@ -32,13 +33,14 @@ internal class Program
 		//ChainOfResponsibility();
 		//VisitorPattern();
 
-		//structural design pattern
+		//							structural design pattern
 		//CompositePattern();
 		//AdapterPattern();
 		//DecoratorPattern();
 		//FacadePattern();
 		//FlyweightPattern();
-		BridgePattern();
+		//BridgePattern();
+		ProxyPattern();
 	}
 
 	#region MementoPatten
@@ -263,4 +265,21 @@ internal class Program
 		samsung.TurnOff();
 	}
 	#endregion
+
+	#region ProxyPattern
+	public static void ProxyPattern()
+	{
+		var library = new Library();
+
+		foreach (var book in new string[] { "arun.txt", "arun.pdf", "arun.xlxs" })
+		{
+			var eBook = new LoggingEBookProxy(book);
+			library.Add(eBook);
+		}
+		library.OpenEBook("arun.pdf");
+		library.OpenEBook("arun.txt");
+	}
+	#endregion
+
+
 }
