@@ -17,6 +17,7 @@ using Facade;
 using Flyweight;
 using Bridge;
 using Proxy;
+using Prototype;
 internal class Program
 {
 	private static void Main(string[] args)
@@ -40,7 +41,8 @@ internal class Program
 		//FacadePattern();
 		//FlyweightPattern();
 		//BridgePattern();
-		ProxyPattern();
+		//ProxyPattern();
+		PrototypePattern();
 	}
 
 	#region MementoPatten
@@ -281,5 +283,15 @@ internal class Program
 	}
 	#endregion
 
+	#region
+	public static void PrototypePattern()
+	{
+		var circle = new Circle();
+		circle.SetRadius(20);
+		circle.Render();
 
+		var clone  = circle.Clone();
+		clone.Render();
+	}
+	#endregion
 }
