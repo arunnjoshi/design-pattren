@@ -1,4 +1,6 @@
-﻿namespace Singleton;
+﻿using System.Threading;
+
+namespace Singleton;
 
 public class ConfigManager
 {
@@ -27,7 +29,16 @@ public class ConfigManager
 
 	public static ConfigManager GetInstance()
 	{
-		instance ??= new ConfigManager();
-		return instance;
+		var semaphoreSlim = new SemaphoreSlim(1, 1);
+		try
+		{
+			semaphoreSlim.Wait();
+			instance ??= new ConfigManager();
+			return instance;
+		}
+		finally
+		{
+			semaphoreSlim.Release();
+		}
 	}
 }
