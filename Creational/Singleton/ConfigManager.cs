@@ -4,7 +4,9 @@ namespace Singleton;
 
 public class ConfigManager
 {
-	private static ConfigManager instance;
+	private static ConfigManager instance = null!;
+	private static SemaphoreSlim semaphoreSlim = new(1, 1);
+
 	private ConfigManager()
 	{
 
@@ -29,7 +31,6 @@ public class ConfigManager
 
 	public static ConfigManager GetInstance()
 	{
-		var semaphoreSlim = new SemaphoreSlim(1, 1);
 		try
 		{
 			semaphoreSlim.Wait();
