@@ -18,6 +18,7 @@ using Flyweight;
 using Bridge;
 using Proxy;
 using Prototype;
+using Singleton;
 internal class Program
 {
 	private static void Main(string[] args)
@@ -42,7 +43,8 @@ internal class Program
 		//FlyweightPattern();
 		//BridgePattern();
 		//ProxyPattern();
-		PrototypePattern();
+		//PrototypePattern();
+		SingletonPatter();
 	}
 
 	#region MementoPatten
@@ -283,15 +285,26 @@ internal class Program
 	}
 	#endregion
 
-	#region
+	#region PrototypePattern
 	public static void PrototypePattern()
 	{
 		var circle = new Circle();
 		circle.SetRadius(20);
 		circle.Render();
 
-		var clone  = circle.Clone();
+		var clone = circle.Clone();
 		clone.Render();
+	}
+	#endregion
+
+	#region SingletonPattern
+	public static void SingletonPatter()
+	{
+		var configManager = ConfigManager.GetInstance();
+		configManager.Set("arun", "joshi");
+		Console.WriteLine(configManager.Get("arun"));
+		var configManager2 = ConfigManager.GetInstance();
+		Console.WriteLine(configManager2.Get("arun"));
 	}
 	#endregion
 }

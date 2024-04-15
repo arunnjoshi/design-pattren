@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Creational\Prototype\Prototype.csproj"/>
+    <ProjectReference Include="..\Creational\Prototype\Prototype.csproj" />
     <ProjectReference Include="..\behavioral\CommandPattern\CommandPattern.csproj" />
     <ProjectReference Include="..\behavioral\Mediator\Mediator.csproj" />
     <ProjectReference Include="..\behavioral\Momento\Momento.csproj" />
@@ -19,6 +19,7 @@
     <ProjectReference Include="..\behavioral\TemplateMethod\TemplateMethod.csproj" />
     <ProjectReference Include="..\behavioral\COR\COR.csproj" />
     <ProjectReference Include="..\behavioral\visitor\visitor.csproj" />
+    <ProjectReference Include="..\Creational\Singleton\Singleton.csproj" />
     <ProjectReference Include="..\Structural\Bridge\Bridge.csproj" />
     <ProjectReference Include="..\Structural\Composite\Composite.csproj" />
     <ProjectReference Include="..\Structural\Adapter\Adapter.csproj" />
