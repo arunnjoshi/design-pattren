@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Creational\FactoryMethod\FactoryMethod.csproj" />
     <ProjectReference Include="..\Creational\Prototype\Prototype.csproj" />
     <ProjectReference Include="..\behavioral\CommandPattern\CommandPattern.csproj" />
     <ProjectReference Include="..\behavioral\Mediator\Mediator.csproj" />

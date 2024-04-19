@@ -19,6 +19,7 @@ using Bridge;
 using Proxy;
 using Prototype;
 using Singleton;
+using FactoryMethod;
 internal class Program
 {
 	private static void Main(string[] args)
@@ -44,7 +45,8 @@ internal class Program
 		//BridgePattern();
 		//ProxyPattern();
 		//PrototypePattern();
-		SingletonPatter();
+		//SingletonPatter();
+		FactoryMethod();
 	}
 
 	#region MementoPatten
@@ -305,6 +307,14 @@ internal class Program
 		Console.WriteLine(configManager.Get("arun"));
 		var configManager2 = ConfigManager.GetInstance();
 		Console.WriteLine(configManager2.Get("arun"));
+	}
+	#endregion
+
+	#region FactoryMethod
+	public static void FactoryMethod()
+	{
+		var controller = new ProductController();
+		controller.ListProduct();
 	}
 	#endregion
 }
