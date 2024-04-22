@@ -37,7 +37,7 @@ internal class Program
 		//ChainOfResponsibility();
 		//VisitorPattern();
 
-		//							structural design pattern
+		//							Structural design pattern
 		//CompositePattern();
 		//AdapterPattern();
 		//DecoratorPattern();
@@ -45,6 +45,8 @@ internal class Program
 		//FlyweightPattern();
 		//BridgePattern();
 		//ProxyPattern();
+
+		//							Creational design pattern
 		//PrototypePattern();
 		//SingletonPatter();
 		//FactoryMethod();
