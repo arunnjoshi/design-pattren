@@ -20,6 +20,7 @@ using Proxy;
 using Prototype;
 using Singleton;
 using FactoryMethod;
+using AbstractFactory.Material;
 internal class Program
 {
 	private static void Main(string[] args)
@@ -46,7 +47,8 @@ internal class Program
 		//ProxyPattern();
 		//PrototypePattern();
 		//SingletonPatter();
-		FactoryMethod();
+		//FactoryMethod();
+		AbstractFactory();
 	}
 
 	#region MementoPatten
@@ -315,6 +317,17 @@ internal class Program
 	{
 		var controller = new ProductController();
 		controller.ListProduct();
+	}
+	#endregion
+
+	#region abstract Factory 
+	public static void AbstractFactory()
+	{
+		var factory = new MaterialWidgetFactory();
+		var button = factory.CreateButton();
+		var textBox = factory.CreateTextBox();
+		button.Render();
+		textBox.Render();
 	}
 	#endregion
 }
