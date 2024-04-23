@@ -21,6 +21,7 @@ using Prototype;
 using Singleton;
 using FactoryMethod;
 using AbstractFactory.Material;
+using Builder;
 internal class Program
 {
 	private static void Main(string[] args)
@@ -50,7 +51,8 @@ internal class Program
 		//PrototypePattern();
 		//SingletonPatter();
 		//FactoryMethod();
-		AbstractFactory();
+		//AbstractFactory();
+		Builder();
 	}
 
 	#region MementoPatten
@@ -332,4 +334,17 @@ internal class Program
 		textBox.Render();
 	}
 	#endregion
+
+	#region Builder
+	public static void Builder()
+	{
+		var presentation = new Presentation();
+		presentation.AddSlide(new Slide("slide 1"));
+		presentation.AddSlide(new Slide("slide 2"));
+		var builder = new PdfDocumentBuilder();
+		presentation.Export(builder);
+		var pdf = builder.GetPdfDocument();
+	}
+	#endregion
+
 }
