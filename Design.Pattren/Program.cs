@@ -52,7 +52,7 @@ internal class Program
 		//SingletonPatter();
 		//FactoryMethod();
 		//AbstractFactory();
-		Builder();
+		//Builder();
 	}
 
 	#region MementoPatten
